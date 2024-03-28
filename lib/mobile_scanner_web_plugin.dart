@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:html' as html;
-import 'dart:ui_web' as ui;
+
+// import 'dart:ui_web' as ui;
 
 import 'package:flutter/services.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
@@ -83,14 +84,14 @@ class MobileScannerWebPlugin {
       cameraFacing = CameraFacing.values[arguments['facing'] as int];
     }
 
-    ui.platformViewRegistry.registerViewFactory(
-      viewID,
-      (int id) {
-        return vidDiv
-          ..style.width = '100%'
-          ..style.height = '100%';
-      },
-    );
+    // ui.platformViewRegistry.registerViewFactory(
+    //   viewID,
+    //   (int id) {
+    //     return vidDiv
+    //       ..style.width = '100%'
+    //       ..style.height = '100%';
+    //   },
+    // );
 
     // Check if stream is running
     if (barCodeReader.isStarted) {
